@@ -11,5 +11,9 @@
 		
 		Country: ${student.country}
 		
+		
+		<br><br>
+		
+		Favorite Language: ${student.favoriteLanguage} <!-- Spring is actually calling student.getFavoriteLanguage() -->
 	</body>
 </html>

@@ -15,19 +15,28 @@
 			
 			<form:select path="country">
 			
-				<!-- Here Spring will call student.getCountryOptions() -->
-				<form:options items="${student.countryOptions}" />
-			
 				<!--  Hardcoded values:
 					<form:option value="Brazil" label="Brazil" />
 					<form:option value="France" label="France" />
 					<form:option value="Germany" label="Germany" />
 					<form:option value="India" label="India" />
 				 -->
+			
+				<!-- Using the Java Student class instead of hardcoding. Here Spring will call student.getCountryOptions() instead of doing it hardcoded -->
+				<form:options items="${student.countryOptions}" />
 				
-			</form:select>
+			</form:select><br><br>
+			
+			Favorite Language:<br><br>
+			
+			<!-- Hardcoded again. On submit, Spring will call student.setFavoriteLanguage(...) -->
+			Java <form:radiobutton path="favoriteLanguage" value="Java" />
+			C# <form:radiobutton path="favoriteLanguage" value="C#" />
+			PHP <form:radiobutton path="favoriteLanguage" value="PHP" />
+			Ruby <form:radiobutton path="favoriteLanguage" value="Ruby" /><br><br>
 			
 			<input type="submit" value="Submit" />
+			
 		</form:form>
 		
 	</body>
