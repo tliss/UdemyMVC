@@ -29,11 +29,15 @@
 			
 			Favorite Language:<br><br>
 			
-			<!-- Hardcoded again. On submit, Spring will call student.setFavoriteLanguage(...) -->
-			Java <form:radiobutton path="favoriteLanguage" value="Java" />
-			C# <form:radiobutton path="favoriteLanguage" value="C#" />
-			PHP <form:radiobutton path="favoriteLanguage" value="PHP" />
-			Ruby <form:radiobutton path="favoriteLanguage" value="Ruby" /><br><br>
+			<!-- Hardcoded again. On submit, Spring will call student.setFavoriteLanguage(...) 
+				Java <form:radiobutton path="favoriteLanguage" value="Java" />
+				C# <form:radiobutton path="favoriteLanguage" value="C#" />
+				PHP <form:radiobutton path="favoriteLanguage" value="PHP" />
+				Ruby <form:radiobutton path="favoriteLanguage" value="Ruby" />
+			-->
+				
+			<!-- Using the Java Student class instead of hardcoding. Here Spring will call student.getFavoriteLanguageOptions() instead of doing it hardcoded-->
+			<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}" /><br><br>
 			
 			<input type="submit" value="Submit" />
 			
