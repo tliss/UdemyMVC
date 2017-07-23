@@ -13,6 +13,8 @@
 			First name: <form:input path="firstName" /><br><br>
 			Last name: <form:input path="lastName" /><br><br>
 			
+			Country:<br><br>
+			
 			<form:select path="country">
 			
 				<!--  Hardcoded values:
@@ -38,6 +40,12 @@
 				
 			<!-- Using the Java Student class instead of hardcoding. Here Spring will call student.getFavoriteLanguageOptions() instead of doing it hardcoded-->
 			<form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}" /><br><br>
+			
+			Operating Systems:<br><br>
+			
+			Linux <form:checkbox path="operatingSystems" value="Linux" />
+			Mac OS <form:checkbox path="operatingSystems" value="Mac OS" />
+			MS Windows <form:checkbox path="operatingSystems" value="MS Windows" />
 			
 			<input type="submit" value="Submit" />
 			

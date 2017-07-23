@@ -8,6 +8,7 @@ public class Student {
 	private String lastName;
 	private String country;
 	private String favoriteLanguage;
+	private String[] operatingSystems;
 	
 	// LinkedHashMap a collection of name-value pairs in an ordered fashion
 	private LinkedHashMap<String, String> countryOptions;
@@ -28,7 +29,6 @@ public class Student {
         favoriteLanguageOptions = new LinkedHashMap<>();
 
         // parameter order: value, display label
-        //
         favoriteLanguageOptions.put("Java", "Java");
         favoriteLanguageOptions.put("C#", "C#");
         favoriteLanguageOptions.put("PHP", "PHP");
@@ -74,5 +74,13 @@ public class Student {
 	public LinkedHashMap<String, String> getFavoriteLanguageOptions() {
         return favoriteLanguageOptions;
     }
+
+	public String[] getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(String[] operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
 	
 }
